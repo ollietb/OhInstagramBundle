@@ -21,12 +21,19 @@ Register the bundle in `app/AppKernel.php`:
         );
     }
 
-Add the following line to `app/config/config.yml`:
+Add the OhInstagramBundle configuration to the imports section of `app/config/config.yml`:
 
 	imports:
+		- { resource: parameters.yml }
 		- { resource: @OhInstagramBundle/Resources/config/services.yml }
 
-And if you're OK with the provided routes, add these to `app/config/routing.yml`
+Add your Instagram API client id/secret parameters to `app/config/parameters.yml`:
+	
+	parameters:
+		instagram_api_client_id: [Client ID]
+    	instagram_api_client_secret: [Client 
+
+And if you're OK with the provided routes, add these to `app/config/routing.yml`:   	
 
     OhInstagramBundle:
         resource: "@OhInstagramBundle/Resources/config/routing.yml"
