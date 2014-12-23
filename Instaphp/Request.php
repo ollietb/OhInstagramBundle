@@ -101,7 +101,7 @@ class Request
 			$this->parameters = $params;
 		$query = '';
 		foreach ($this->parameters as $k => $v)
-			$query .= ((strlen ($query) == 0) ? '?' : '&') . sprintf('%s=%s', $k, $v);
+			$query .= ((strlen ($query) == 0) ? '?' : '&') . sprintf('%s=%s', $k, urlencode($v));
 
 		if (null !== $this->_cache) {
 			$key = sha1($url.$query);
