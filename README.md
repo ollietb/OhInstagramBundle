@@ -1,6 +1,8 @@
 OhInstagramBundle
 =================
 
+## This bundle has been deprecated in favour of [a newer version](https://github.com/ollieLtd/InstagramBundle) which uses an updated version of @sesser's Instaphp library
+
 Uses [Instaphp](https://github.com/sesser/Instaphp) by [sesser](https://github.com/sesser) as a Symfony2 service
 
 Installation
